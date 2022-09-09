@@ -1,0 +1,30 @@
+﻿@model Carro
+
+@{
+    ViewData["title"] = "Cadastr de Carro";
+}
+
+<h1>Cadastro de Carro</h1>
+
+<form asp-action="">
+    <div class="mb-3">
+       <div class="mb-3">
+        <label asp-for="Modelo"></label>
+        <input asp-for="Modelo" class="form-control"/>
+       </div>
+       <div class="mb-3">
+        <label asp-for="Ano" class="form-control" />
+        <input asp-for="Ano" class="form-control"/>
+       </div>
+       <div class="mb-3">
+        <label asp-for="Automatico" class="form-control" />
+        <input asp-for="Automatico" class="form-control"/>
+       </div>
+       <div class="mb-3">
+        <label asp-for="Valor" class="form-control" />
+        <input asp-for="Valor" class="form-control"/>
+        </div>
+        <input type="submit" value="Cadastrar" class="btn btn-primary"/>
+    </div>
+
+</form>

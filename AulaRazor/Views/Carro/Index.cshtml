@@ -1,0 +1,33 @@
+﻿@model List<Carro>;
+
+
+<a asp-action="cadastrar" class="btn btn-sm btn-outline-dark">Cadastrar</a>
+<h1>Lista de Carros</h1>
+
+<p>Table with colgroup</p>
+<table class="table">
+    <!--Criar a primeira linha com os titulos das colunas-->
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th>Fabricante</th>
+    <th>Modelo</th>
+    <th>Ano</th>
+    <th>Valor</th>
+    <th>Automático</th>
+    <th>Combustível</th>
+  </tr>
+  
+  <!--Criar um laço de repetição para criar as linhas com dados do carro da tabela-->
+    @foreach (var carro in Model)
+    {
+          <tr>
+            <td>@carro.Fabricante</td>
+            <td>@carro.Modelo</td>
+            <td>@carro.Ano</td>
+            <td>@carro.Valor</td>
+            <td>@(carro.Automatico?"Automático":"Manual")</td>
+            <td>@carro.Combustivel</td>
+          </tr>
+    }
+
+</table>
